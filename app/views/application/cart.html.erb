@@ -1,0 +1,9 @@
+
+<%= render partial: 'products/cart', locals: { cart: @user_cart }%>
+
+
+<h2>Add An Item</h2>
+<%= form_tag '/products', method: 'put' do %>
+  <%= text_field_tag :product %>
+  <%= submit_tag "add to cart" %>
+<% end %>
